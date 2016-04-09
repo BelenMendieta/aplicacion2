@@ -1,0 +1,407 @@
+ <!doctype html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <title>Segunda Aplicación</title>
+ 
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/temasapp2.min.css"/>
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/acciones.js"></script>
+  <script src="phonegap.js" type="text/javascript"></script>
+  <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+  </script>
+  </head>
+ 
+  <body onLoad="MM_preloadImages('imagenes/atlixco.png')">
+  <div data-role="page" id="Principal" data-theme="a">
+  	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 		<h1>Semana Santa </h1>
+   </div>
+ <div>
+ 	<center>
+ 	  <a href="imagenes/semana.jpg" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image19','','imagenes/atlixco.png',1)"></a>
+ 	  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image19','','imagenes/atlixco.png',1)"><img src="imagenes/semana.png" width="200&" height="200%" id="Image19"></a>
+ 	</center></div>
+  	
+  <div>
+  	<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-c">
+  	<li class="ui-first-child ui-last-child">
+  	<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>¿QUÉ ES LA SEMANA SANTA?</h2>
+  	<p>Se muestra definición</p>
+  		</a>
+  	</li>
+  <li class="ui-first-child ui-last-child">
+ 	<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>¿QUÉ RELIGIONES LA PRACTICAN?</h2>
+  	<p>Se muestran religiones</p>
+  	</a>
+  </li>
+ <li class="ui-first-child ui-last-child">
+  	<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>SEMANA SANTA EN ATLIXCO</h2>
+  	<p>Muestra información sobre Atlixco en Semana Santa</p>
+  	</a>
+  	</li>
+  <li class="ui-first-child ui-last-child">
+  	<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>CELEBRACIÓN EN LA CD. DE PUEBLA</h2>
+  	<p>Muestra información sobre la Cd. de Puebla en Semana Santa</p>
+  	</a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+   	<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>IZTAPALAPA</h2>
+  	<p>Muestra información sobre Iztapalapa en Semana Santa</p>
+  	</a>
+  	</li>
+     <li class="ui-first-child ui-last-child">
+   	<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>SAN LUIS POTOSI</h2>
+  	<p>Muestra información sobre San Luis Potosi en Semana Santa </p>
+  	</a>
+  	</li>
+     <li class="ui-first-child ui-last-child">
+   	<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>GUERRERO</h2>
+  	<p>Muestra información sobre Guerrero en Semana Santa</p>
+  	</a>
+  	</li>
+     <li class="ui-first-child ui-last-child">
+   	<a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  	<h2>OAXACA</h2>
+  	<p>Muestra información sobre Oaxaca en Semana Santa</p>
+  	</a>
+  	</li>
+  </ul>
+</div>
+
+
+<div data-role="footer" align="center" data-theme="a">
+  <div>
+  	<img src="imagenes/persona_rosa.png" width="46" height="46">
+  </div>
+  <div>
+ 	 <h4>Aplicacion Dos</h4>
+  	<h4>Belen Mendieta Calvario</h4>
+  </div>
+ </div>
+ </div>
+
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>DEFINICION DE SEMANA SANTA</h1>
+ </div>
+<div data-role="content" align="center">
+	 <div>
+ 		<h2>SEMANA SANTA</h2></div>
+        <p>Es la semana más intensa del Año Litúrgico, en la cual se reza y reflexiona sobre la Pasión y Muerte de Cristo.</p>
+ 		<img src="imagenes/jesus.jpg" width="70%" height="70%">
+        <h3>Explicación de la celebración</h3>
+        
+        <img src="imagenes/cristo.jpg" width="70%" height="70%" align="center">
+	<p>
+	La Semana Santa es el momento litúrgico más intenso de todo el año.Esta semana la debemos dedicar a la oración y la reflexión en los misterios de la Pasión y Muerte de Jesús para aprovechar todas las gracias que esto nos trae.</p>
+<p>
+	Se le llamaba en un principio “La Gran Semana”. Ahora se le llama Semana Santa o Semana Mayor y a sus días se les dice días santos. Esta semana comienza con el Domingo de Ramos y termina con el Domingo de Pascua.</p>
+<p>
+	Vivir la Semana Santa es acompañar a Jesús con nuestra oración, sacrificios y el arrepentimiento de nuestros pecados. Asistir al Sacramento de la Penitencia en estos días para morir al pecado y resucitar con Cristo el día de Pascua.</p>
+<p>
+	Lo importante de este tiempo no es el recordar con tristeza lo que Cristo padeció, sino entender por qué murió y resucitó. Es celebrar y revivir su entrega a la muerte por amor a nosotros y el poder de su Resurrección, que es primicia de la nuestra.</p>
+<p>
+	La Semana Santa fue la última semana de Cristo en la tierra. Su Resurrección nos recuerda que los hombres fuimos creados para vivir eternamente junto a Dios.</p>
+  
+ 	</div>
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+	 </div>
+ </div>
+
+ 
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+  	<h1>¿QUÉ RELIGIONES LA PRÁCTICAN?</h1>
+  </div>
+ <div data-role="content" align="center">
+ 	<div>
+ 		<h2>Algunas religiones que la practican son:</h2></div>
+        
+        <h2>Testigos de Jehová:</h2> <img src="imagenes/testigos.jpg" width="55%" height="55%">
+ <p>Los miembros de esta religión celebran la Cena del Señor con pan sin levadura y vino en sus congregaciones. A esta fracción del pan solo pueden acercarse las personas ungidas –según sus escritos– aquellos que tengan la esperanza de ir al cielo.</p>
+	 
+	<h2>Los judíos:</h2> <img src="imagenes/judios.jpg" width="65%" height="65%" >
+ <p>Que no creen en Jesús como su Salvador, celebran el matza, una cena que consiste en hierbas con sabor amargo y pan sin levadura (ácimo) en forma de galleta. El sabor amargo recuerda la esclavitud que vivió el pueblo de Israel ante los egipcios; y el pan sin levadura, según las escrituras bíblicas, simboliza la humildad de esta comunidad.</p>
+	 
+	<h2>Adventistas:</h2> <img src="imagenes/adventistas.jpg" width="65%" height="65%" >
+<p>En el sentir de los adventistas, la Semana Santa es la conmemoración de la pasión de Cristo; sin embargo, los seis días los trabajan normalmente, además, no tienen prohibición para ingerir alimentos, aunque tienden a ser vegetarianos.</p>
+	 
+	<h2>Los Católicos:</h2><img src="imagenes/catolicos.jpg" width="70%" height="70%" >
+ <p>Las tradiciones católicas durante la Semana Mayor incluyen procesiones con diferentes imágenes de Cristo, la Virgen y los santos; vía crucis en los templos, por las vías de las ciudades o en cerros tutelares, y varias ceremonias especiales.</p>
+
+<p>Y la lista continúa, ahora en pleno siglo XXI, existen muchas religiones en Bogotá, en todo el país y muchas más en el mundo; unas más reconocidas que otras, pero todas sin duda alguna, celebran la semana santa muy a su manera.</p>
+ 	</div>
+ 	<div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+ 	</div>
+ </div>
+
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+	 <h1>SEMANA SANTA EN ATLIXCO</h1>
+ </div>
+ <div data-role="content" align="center">
+        
+     <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Tapete Floral</h1>
+  			<div>
+  			<p>El gobierno municipal inauguró su sexto tapete monumental de flores con motivo de la Semana Santa,ademas de tener finews turísticos.</p>
+  			<br>
+  			</div>
+  <div>
+	  <img src="imagenes/tapete.jpg" width="90%" height="90%"></div>
+  </div>
+  </div>
+  
+         <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Domingo de Ramos</h1>
+  			<div>
+  			<p>Celebramos la entrada triunfal de Jesús a Jerusalén en la que todo el pueblo lo alaba como rey con cantos y palmas. Por esto, nosotros llevamos nuestras palmas a la Iglesia para que las bendigan ese día y participamos en la misa. </p>
+  			<br>
+  			</div>
+  <div>
+	  <img src="imagenes/domingo.jpg" width="90%" height="90%"> </div>
+  </div>
+  </div>
+  
+   <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Jueves Santo</h1>
+  			<div>
+  			<p>Este día recordamos la Última Cena de Jesús con sus apóstoles en la que les lavó los pies dándonos un ejemplo de servicialidad. En la Última Cena, Jesús se quedó con nosotros en el pan y en el vino, nos dejó su cuerpo y su sangre. Es el jueves santo cuando instituyó la Eucaristía y el Sacerdocio. Al terminar la última cena, Jesús se fue a orar, al Huerto de los Olivos. Ahí pasó toda la noche y después de mucho tiempo de oración, llegaron a aprehenderlo.</p>
+  			<br>
+  			</div>
+  <div>
+	  <img src="imagenes/jueves.jpg" width="90%" height="90%"> </div>
+  </div>
+ </div>
+    
+    <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Viernes Santo (Engrillados)</h1>
+  			<div>
+  			<p>La Procesión de los Engrillados se celebra cada Viernes Santo en medio de gran expectación.Las principales calles  se cubren con alfombras decorativas elaboradas con aserrín de colores en un recorrido de cinco kilómetros que comienza en el Exconvento de San Francisco, en donde, con un paso lento y quejumbroso, cientos de hombres semidesnudos y encadenados caminan en busca del perdón divino a través del dolor </p>
+  			<br>
+  			</div>
+  <div>
+	  <img src="imagenes/viernes.png" width="80%" height="80%"> </div>
+  </div>
+  </div>
+  
+     <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Sábado Santo o Sábado de Gloria</h1>
+  			<div>
+ <p>Se recuerda el día que pasó entre la muerte y la Resurrección de Jesús. Es un día de luto y tristeza pues no tenemos a Jesús entre nosotros. Las imágenes se cubren y los sagrarios están abiertos. Por la noche se lleva a cabo una vigilia pascual para celebrar la Resurrección de Jesús. Vigilia quiere decir “ la tarde y noche anteriores a una fiesta.”. En esta celebración se acostumbra bendecir el agua y encender las velas en señal de la Resurrección de Cristo, la gran fiesta de los católicos.</p>
+  			<br>
+  			</div>
+  <div>
+	  <img src="imagenes/sabado.png" width="90%" height="90%"> </div>
+  </div>
+  </div>
+  </div>
+  
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+ 	</div>
+ </div>
+</div>
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>CELEBRACIÓN EN LA CD. DE PUEBLA</h1>
+ </div>
+ <div data-role="content" align="center">
+ 	<div>
+ 		
+        <p>Durante la Semana Mayor en la Cd. de Puebla se lleva a cabo:</p>
+        <h2>Procesión de Viernes Santo</h2>
+        <img src="imagenes/puebla.jpg" width="90%" height="90%" align="center">
+<p>Desde hace 24 años, en la ciudad de Puebla se lleva a cabo la Procesión de Viernes Santo, que parte del atrio de la Catedral de Puebla. La procesión se realizaba los Viernes Santos desde tiempos coloniales, pero se suspendió a causa de las Leyes de Reforma.
+Es considerada uno de los actos más significativos de la “Semana Mayor” y a ella asisten más de 150 mil feligreses.</p>
+<p>La organización principal se concentra en 40 personas que trabajan desde enero; pero participan tres mil fieles, ya incluidos los integrantes de la Cofradía de los Nazarenos.</p>
+<p>Las imágenes elegidas para la procesión son representativas para los poblanos y se les tiene mucha devoción.</p>
+<p>En 1995, se pidió a las monjas de Santa Mónica incluir al Señor de las Maravillas, en lugar de la escultura del Cristo de la Expiación, que se encuentra en la Iglesia del Carmen.</p>
+ 		
+ 	</div>
+  </div>
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+	 </div>
+ 	</div>
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>IZTAPALAPA</h1>
+ </div>
+<div data-role="content" align="center">
+	 <div>
+ 		<h2>EL VIACRUCIS DE IZTAPALAPA</h2>
+         <p>El Viacrucis, también conocido como la Pasión de Iztapalapa , tiene lugar durante la Semana Santa y convoca millones de personas que  invaden las callejuelas de los barrios del pueblo desde 1843. Originalmente se hacia la representación como parte de la evangelización para que los indígenas pudieran comprender mejor la pasión de Cristo y posteriormente se volvió un acto de verdadera fe. Para ser elegido como actor, se necesita ser nativo de la delegación, y tener una conducta moral impecable. Algunos de los papeles son representados por el mismo actor durante muchos años, como el caso de Judas Iscariote. Éste teatro en masa es también conocido en otras partes del mundo,lo cual genera la entrada de turismo en estas fechas.
+La representación es acompañada, además, por penitentes o por promeseros que pagan mandas por favores recibidos, en ocasiones pagan justos por pecadores; 
+La procesión concluye el Viernes santo con la Crucifixión de Cristo en el cerro de la Estrella, alrededor de las tres de la tarde. La tradición oral dice que una vez que el intérprete de Cristo es crucificado, llueve. </p>
+	<img src="imagenes/iztapalapa.jpg" width="85%" height="85%" align="center">
+	</div> 		
+ 	</div>>
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+	 </div>
+ </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>SAN LUIS POTOSI</h1>
+ </div>
+ <div data-role="content" align="center">
+ 	<div>
+     		<img src="imagenes/potosi.jpg" width="80%" height="80%">
+ 		<h2>PROCESIÓN DEL SILENCIO EN SAN LUIS POTOSI</h2>
+       <p> La Procesión del Silencio de San Luis Potosí es un evento anual que conmemora la pasión y muerte de Cristo y a Nuestra Señora de la Soledad. Ocurre en la noche del Viernes Santo, empezando en el Templo del Carmen, de donde es originario, y el recorrido sigue a través de las calles del centro histórico de la ciudad de San Luis Potosí. Durante el evento se encuentran los sonidos de tambores y cornetas, pero ningún participante o espectador habla, ameritando su nombre. Es una de las celebraciones de Semana Santa más importante de México y fue declarada parte del patrimonio cultural del estado de San Luis Potosí en el 2013.
+ 	</div>
+  </div>
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+	 </div>
+ 	</div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>GUERRERO</h1>
+ </div>
+ <div data-role="content" align="center">
+ 	<div>
+ 		<h2>ENCRUZADOS DE TAXCO,GUERRERO</h2>
+        <p>El martes Santo se efectúa la Procesión de las Ánimas durante la noche y es acaso uno de los momentos más impactantes de la fiestas de la Semana Mayor, sin mencionar la solemnidad con que los participantes –encruzados, flagelantes y ánimas- llevan a cabo su papel en las procesiones. Estos personajes se prepararon, física y espiritualmente, durante todo el año para participar con el objetivo de lavar sus culpas.</p> 
+        <img src="imagenes/guerrero.jpg" width="85%" height="85%" align="center">
+	<p>A los encruzados podrás identificarlos por el rollo de ramas (de 2.5 metros de largo y 50 kg de peso) espinosas que cargan sobre los hombros y atan a sus brazos, lo que hace sangrar su cuello y espalda. Los flagelantes, por su parte, cargan una cruz de madera, de 3 metros de alto y 6 kilos de peso, y llevan en una mano una disciplina (instrumento flagelante) que utilizan para lacerarse la espalda.</p>
+ 	</div>
+  </div>
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+	 </div>
+     </div>
+ 	
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+ 	<h1>OAXACA</h1>
+ </div>
+ <div data-role="content" align="center">
+ 	<div>
+ 		<h2>SEMANA SANTA EN OAXACA</h2>
+        <img src="imagenes/oaxaca.jpg" width="40%" height="40%" align="center">
+        <p>La Semana Santa renueva el espíritu religioso de los creyentes y también recupera antiguas tradiciones regionales que celebran, según su modo, la Pasión de Jesucristo.</p>
+     </div>
+        
+<div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>"Viernes del Llano"</h1>
+  			<div>
+  			<p>En Oaxaca se comienza después del miércoles de ceniza cuando, durante cinco viernes, los estudiantes oaxaqueños ofrecen rosas, claveles, jazmines y ramitos de violetas a las damas que pasean por el parque de El Llano, por lo que esta tradición se denomina “Viernes del Llano”. </p>
+  			<br>
+  			</div>
+ </div>
+ </div>
+ 
+ <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Viernes de la Samaritana</h1>
+  			<div>
+  			<p>Típico es el viernes de la Samaritana cuando, recreando el episodio de la mujer que convidó agua a Jesús, se ofrece agua fresca a los visitantes en los templos de la ciudad, mercados, escuelas, casas particulares e instituciones públicas.
+</p>
+  			<br>
+  			</div>
+ </div>
+ </div>
+ 
+ <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Viernes de Dolores</h1>
+  			<div>
+  			<p>El Viernes de Dolores se instala el Altar de Dolores en las iglesias y algunos domicilios particulares. La costumbre de conmemorar el sufrimiento de la Virgen María data aproximadamente desde 1727.
+</p>
+  			<br>
+  			</div>
+  </div>
+  </div>
+
+ <div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>"Procesión de las Palmas"</h1>
+  			<div>
+  			<p>La celebración principal en la Catedral de Oaxaca es la “Procesión de las Palmas”, en el barrio de Xochimilco, cuando los artesanos dan vuelo a su creatividad dotando a las palmas de variadas formas para recibir la bendición.</p>
+  			<br>
+  			</div>
+   </div>
+</div>
+
+<div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Viernes Santo</h1>
+  			<div>
+  			<p>Durante la jornada del Viernes Santo pueden verse variadas representaciones de la Pasión y Muerte de Jesucristo en distintos barrios pero la más sobresaliente es la escenificación de San Juan de Chapultepec, más conocido como San Juanito, ubicado al sur de la Plaza Central de la Ciudad de Oaxaca.</p>
+  			<br>
+  			</div>
+</div>
+</div>
+
+<div data-role="main" class="ui-content">
+  	<div data-role="collapsible" data-content-theme="false">
+  		<h1>Procesión del Silencio</h1>
+  			<div>
+  			<p>Una procesion encabezada por la Virgen de la Soledad, llamada también la Procesión del silencio, cierra las actividades del día en total recogimiento. Recién el Sábado de Gloria, cerca de la medianoche, las campanas de los templos repicarán anunciando la llegada del Domingo de Resurrección, mientras el cielo se ilumina con una fiesta de juegos pirotécnicos. </p>
+  			<br>
+  			</div>
+</div>
+</div>        
+</div>    
+
+ <div data-role="footer" data-theme="a">
+ 		<h4>BELEN MENDIETA CALVARIO</h4>
+  </div>
+  </div>
+
+
+
+ </body>
+ </html>
